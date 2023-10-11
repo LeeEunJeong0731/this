@@ -1,4 +1,8 @@
-function a() {
-  return;
+function a(callback) {
+  return callback();
 }
-console.log(this);
+console.log(
+  a(function () {
+    console.log(this);
+  })
+);
